@@ -1,10 +1,10 @@
-const dataTime = [{
-        name: "alr",
+const allDataDetails = [{
+        name: "alr", 
         timeIn: ["8:20", "12:20", "15:20"],
         timeOut: ["11:00", "15:00", "17:00", ],
     },
     {
-        name: "bhp",
+        name: "bph",
         timeIn: ["10:30", "14:30", "17:00"],
         timeOut: ["11:45", "15:45", "17:00"],
     },
