@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kiedy przelew</title>
+    <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
     <script src="data/data.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
+    <div class="container">
         <div class="step-one">
                 <h2>Kalkulator czasu przelewu</h2>
                 <form action="" name="kiedy-przelew">
                     <p class="field-desc">Kiedy zlecono przelew?</p>
-                    <div class="flex">
+                    <div class="flex change">
                         <div class="item-6">
                             <div class="three-part-field">
                                 <span class="add-time btn-inc" id="add">+</span>
@@ -40,12 +42,12 @@
                         <div class="item-6">
                             <select name="from-bank" id="from-bank">
                                 <option value="0" selected="selected">Wybierz bank nadawcy</option>
-                            <option value="alr">Alior Bank</option><option value="bph">Bank BPH</option><option value="bps">Bank BPS</option><option value="agri">Credit Agricole</option><option value="mil">Bank Millennium</option><option value="pek">Bank Pekao SA</option><option value="pcz">Bank Pocztowy</option><option value="sant">Santander</option><option value="bgk">BGK</option><option value="fts">BGŻ BNP Paribas</option><option value="bos">BOŚ Bank</option><option value="cit">Bank Handlowy (Citibank)</option><option value="lks">Volkswagen Bank</option><option value="deu">Deutsche Bank Polska</option><option value="dnb">DnB NORD</option><option value="eur">Eurobank</option><option value="gin">Getin Bank</option><option value="hsb">HSBC Bank Polska</option><option value="ide">Idea Bank</option><option value="ing">ING Bank Śląski</option><option value="int">Inteligo</option><option value="mbk">mBank</option><option value="nes">Nest Bank</option><option value="nob">Noble Bank</option><option value="nrd">Nordea Bank</option><option value="pko">PKO Bank Hipoteczny</option><option value="pkh">PKO Bank Polski</option><option value="pls">Plus Bank</option><option value="rff">Raiffeisen</option><option value="tmo">T-Mobile Usługi Bankowe</option><option value="toy">Toyota Bank</option></select>
+                            <option value="alr">Alior Bank</option><option value="bph">Bank BPH</option><option value="bps">Bank BPS</option><option value="agri">Credit Agricole</option><option value="mil">Bank Millennium</option><option value="pek">Bank Pekao SA</option><option value="pcz">Bank Pocztowy</option><option value="sant">Santander</option><option value="bgk">BGK</option><option value="fts">BGŻ BNP Paribas</option><option value="bos">BOŚ Bank</option><option value="cit">Bank Handlowy (Citibank)</option><option value="lks">Volkswagen Bank</option><option value="deu">Deutsche Bank Polska</option><option value="dnb">DnB NORD</option><option value="eur">Eurobank</option><option value="gin">Getin Bank</option><option value="hsb">HSBC Bank Polska</option><option value="ide">Idea Bank</option><option value="ing">ING Bank Śląski</option><option value="int">Inteligo</option><option value="mbk">mBank</option><option value="nes">Nest Bank</option><option value="nob">Noble Bank</option><option value="nrd">Nordea Bank</option><option value="pkh">PKO Bank Hipoteczny</option><option value="pko">PKO Bank Polski</option><option value="pls">Plus Bank</option><option value="rff">Raiffeisen</option><option value="tmo">T-Mobile Usługi Bankowe</option><option value="toy">Toyota Bank</option><option value="vwb">VW Bank direct</option></select>
                         </div>
                         <div class="item-6">
                             <select name="to-bank" id="to-bank">
                                 <option value="0" selected="selected">Wybierz bank odbiorcy</option>
-                            <option value="alr">Alior Bank</option><option value="bph">Bank BPH</option><option value="bps">Bank BPS</option><option value="agri">Credit Agricole</option><option value="mil">Bank Millennium</option><option value="pek">Bank Pekao SA</option><option value="pcz">Bank Pocztowy</option><option value="sant">Santander</option><option value="bgk">BGK</option><option value="fts">BGŻ BNP Paribas</option><option value="bos">BOŚ Bank</option><option value="cit">Bank Handlowy (Citibank)</option><option value="lks">Volkswagen Bank</option><option value="deu">Deutsche Bank Polska</option><option value="dnb">DnB NORD</option><option value="eur">Eurobank</option><option value="gin">Getin Bank</option><option value="hsb">HSBC Bank Polska</option><option value="ide">Idea Bank</option><option value="ing">ING Bank Śląski</option><option value="int">Inteligo</option><option value="mbk">mBank</option><option value="nes">Nest Bank</option><option value="nob">Noble Bank</option><option value="nrd">Nordea Bank</option><option value="pko">PKO Bank Hipoteczny</option><option value="pkh">PKO Bank Polski</option><option value="pls">Plus Bank</option><option value="rff">Raiffeisen</option><option value="tmo">T-Mobile Usługi Bankowe</option><option value="toy">Toyota Bank</option></select>
+                            <option value="alr">Alior Bank</option><option value="bph">Bank BPH</option><option value="bps">Bank BPS</option><option value="agri">Credit Agricole</option><option value="mil">Bank Millennium</option><option value="pek">Bank Pekao SA</option><option value="pcz">Bank Pocztowy</option><option value="sant">Santander</option><option value="bgk">BGK</option><option value="fts">BGŻ BNP Paribas</option><option value="bos">BOŚ Bank</option><option value="cit">Bank Handlowy (Citibank)</option><option value="lks">Volkswagen Bank</option><option value="deu">Deutsche Bank Polska</option><option value="dnb">DnB NORD</option><option value="eur">Eurobank</option><option value="gin">Getin Bank</option><option value="hsb">HSBC Bank Polska</option><option value="ide">Idea Bank</option><option value="ing">ING Bank Śląski</option><option value="int">Inteligo</option><option value="mbk">mBank</option><option value="nes">Nest Bank</option><option value="nob">Noble Bank</option><option value="nrd">Nordea Bank</option><option value="pko">PKO Bank Hipoteczny</option><option value="pkh">PKO Bank Polski</option><option value="pls">Plus Bank</option><option value="rff">Raiffeisen</option><option value="tmo">T-Mobile Usługi Bankowe</option><option value="toy">Toyota Bank</option><option value="vwb">VW Bank direct</option></select>
                         </div>
                     </div>
                     <div class="flex account-by-nr">
@@ -60,17 +62,7 @@
                             <span class="bank-name"></span>
                         </div>
                     </div>
-                        <div class="step-two">
-                <h3>Przelew dotrze:</h3>
-                
-                <p class="out-name">
-                    <span id="out-time"></span>
-                </p>
-            </div>
-                <div class="step-error">
-                <h3>Formularz zawiera błędy:</h3>
-                <ul id="error-list"></ul>
-            </div>
+                      
                     <div class="flex">
                         <div class="item-12">
                             <input type="submit" value="SPRAWDŹ" class="btn-send">
@@ -78,6 +70,13 @@
                     </div>
                 </form>
             </div>
+        </div>
+    <div class="step-two">
+        <div class="title">
+            Twój przelew:
+
+    </div>
+    <div class="information"></div>
     
 </body>
 </html>
